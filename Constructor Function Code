@@ -1,0 +1,5 @@
+function MyToken( uint256 initialSupply, string tokenName, uint8 decimalUnits, string tokenSymbol, address centralMinter ) { if(centralMinter != 0 ) owner = centralMinter;
+contract MyToken { uint256 public totalSupply; function MyToken(...) { totalSupply = initialSupply; ... } ... }
+function mintToken(address target, uint256 mintedAmount) onlyOwner { balanceOf[target] += mintedAmount; totalSupply += mintedAmount; Transfer(0, owner, mintedAmount); Transfer(owner, target, mintedAmount); }
+/* Initializes contract with initial supply tokens to the creator of the contract */ function MyToken(uint256 initialSupply, string tokenName, uint8 decimalUnits, string tokenSymbol) { balanceOf[msg.sender] = initialSupply; // Give the creator all initial tokens name = tokenName; // Set the name for display purposes symbol = tokenSymbol; // Set the symbol for display purposes decimals = decimalUnits; // Amount of decimals for display purposes }
+timeOfLastProof = now;
