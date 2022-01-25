@@ -1,0 +1,12 @@
+
+contract owned { address public owner; function owned() { owner = msg.sender; } modifier onlyOwner { if (msg.sender != owner) throw; _ } function transferOwnership(address newOwner) onlyOwner { owner = newOwner; } contract MyToken is owned { /* the rest of the contract as usual */ }
+contract MyToken { /* This creates an array with all balances */ mapping (address => uint256) public balanceOf; 
+function MyToken() { balanceOf[msg.sender] = 21000000; }
+/* Send coins */ function transfer(address _to, uint256 _value) { /* Add and subtract new balances */ balanceOf[msg.sender] -= _value; balanceOf[_to] += _value; }
+mapping (address => bool) public frozenAccount; event FrozenFunds(address target, bool frozen); function freezeAccount(address target, bool freeze) onlyOwner { frozenAccount[target] = freeze; FrozenFunds(target, freeze); }
+function transfer(address _to, uint256 _value) { if (!approvedAccount[msg.sender]) throw;
+}
+
+
+
+
