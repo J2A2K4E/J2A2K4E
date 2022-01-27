@@ -1,0 +1,4 @@
+The first step is to create a token system that will have value derivitive of (accumulated) sentiment/change in gold, silver, platinum, & Palladium price +/- price of the cryptocurrency.
+A user will buy in to the exchange by purchasing Opticoin (OPTC) tokens. The OPTC tokens can then be only be used to purchase Promisory Options on LetsOption.store and through the Commissionary Stack Options Reserve Bank (CSORB). The tokens, however, will be open to be traded on other cryptocurrency spot exchanges.
+The trade functions used in this program will redistribute the token ownership between trade partners at random times (execute a trade order) for spot exchanges and LetsOption.store. For CSORB, trade functions will be handled differently.
+The next step is to create a website for LetsOption.store, and a seperate website for CSORB.
